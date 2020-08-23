@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './category_meals_screen.dart';
+import '../screens/category_meals_screen.dart';
 
 // singol element that i find in the main page
 
