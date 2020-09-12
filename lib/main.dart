@@ -1,4 +1,6 @@
+import 'package:appcibo/screens/meal_detail_screen.dart';
 import 'package:flutter/material.dart';
+
 
 import 'screens/category_meals_screen.dart';
 import 'screens/categories_screen.dart';
@@ -33,7 +35,13 @@ class MyApp extends StatelessWidget {
       routes: {  
         '/': (ctx) => CategoriesScreen(),      
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
         },
+
+      // usata per settare su quale magina mandare l'utente nel caso un' altra pagina non viene caricata
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => CategoriesScreen(),);
+      },
     );
   }
 }
