@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../screens/category_meals_screen.dart';
 
-// singol element that i find in the main page
+// single element that i find in the main page
 
 class CategoryItem extends StatelessWidget {
   final String id;
@@ -12,9 +12,8 @@ class CategoryItem extends StatelessWidget {
 
 //function that change page
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(
-      CategoryMealsScreen.routeName, 
-      arguments: {'id': id, 'title': title});
+    Navigator.of(ctx).pushNamed(CategoryMealsScreen.routeName,
+        arguments: {'id': id, 'title': title});
   }
 
   @override
