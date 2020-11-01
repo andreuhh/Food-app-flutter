@@ -35,6 +35,10 @@ class _TabsScreenState extends State<TabsScreen> {
         //rende dinamica la scritta Categories / Favorites nell'header in base alla pagina selezionata
         title: Text(_pages[_selectedPageIndex]['title']),
       ),
+      // drawer fa comparire hamburger menu + sidebar
+      drawer: Drawer(
+        child: Text('The Drawer'),
+      ),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
