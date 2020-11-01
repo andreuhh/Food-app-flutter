@@ -2,6 +2,26 @@ import 'package:flutter/material.dart';
 
 // this is the sidebar of the App
 class MainDrawer extends StatelessWidget {
+  Widget buildListTile(String title, IconData icon) {
+    return ListTile(
+      leading: Icon(
+        icon,
+        size: 26,
+      ),
+      title: Text(
+        title,
+        style: TextStyle(
+          fontFamily: 'RobotoCondensed',
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      onTap: () {
+        //...
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -20,6 +40,17 @@ class MainDrawer extends StatelessWidget {
                   fontSize: 30,
                   color: Theme.of(context).primaryColor),
             ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          buildListTile(
+            'Meal',
+            Icons.restaurant,
+          ),
+          buildListTile(
+            'Filters',
+            Icons.settings,
           ),
         ],
       ),
