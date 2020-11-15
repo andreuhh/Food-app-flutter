@@ -10,7 +10,6 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
-  final Function removeItem;
 
   MealItem(
       {@required this.id,
@@ -18,8 +17,7 @@ class MealItem extends StatelessWidget {
       @required this.imageUrl,
       @required this.affordability,
       @required this.duration,
-      @required this.complexity,
-      @required this.removeItem});
+      @required this.complexity});
 
   // trasforma grado di complessita da enum a stringa
   String get complexityText {
@@ -63,7 +61,7 @@ class MealItem extends StatelessWidget {
     )
         .then((result) {
       if (result != null) {
-        removeItem(result);
+        //removeItem(result);
       }
     });
   }
